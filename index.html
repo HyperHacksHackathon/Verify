@@ -3,20 +3,17 @@
     <head> 
         <meta charset="utf-8" /> 
         <meta name="viewport" content="width=device-width, initial-scale=1" /> 
-        <title>HyperHacks Application Form</title> 
-        <style>
-            *{
-                margin:0;
-                padding:0;
-            } 
-            iframe{
-                border: none;
-                width: 100vw;
-                height: 100vh;
-            }</style> 
+        <title>Email Verification</title> 
+        <style></style> 
     </head> 
     <body> 
-        <div id="wrapper">
-            <iframe src='https://static.mlh.io/docs/mlh-code-of-conduct.pdf'></iframe>
-        </div> 
-    </body> </html>
+        <h1>Thanks for Verifying</h1>
+        <script>
+            let params = new URLSearchParams(location.search);
+            const hash = params.get('hash');
+            var xmlHttp = new XMLHttpRequest();
+            xmlHttp.open("GET", 'https://HyperHacks-Bot.alternis3019.repl.co/verify?hash=' + hash, true); // true for asynchronous 
+            xmlHttp.send(null);
+        </script>
+    </body> 
+</html>
